@@ -87,7 +87,7 @@ if (isset($_POST['simpan'])) {
 
           <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
             <li class="dropdown-header">
-              <h6>Nrul Hidayah</h6>
+              <h6>Gunawan</h6>
               <span>Web Designer</span>
             </li>
             <li>
