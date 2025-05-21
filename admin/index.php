@@ -174,7 +174,7 @@
 
 
             <!-- Welcome Card -->
-            <div class="col-xxl-4 col-xl-12">
+            <div class="col-xl-12">
 
               <div class="card info-card customers-card shadow-sm w-100">
 
@@ -192,7 +192,7 @@
             <!-- Reports -->
             
             <!-- Sales Card -->
-            <div class="col-xxl-4 col-md-6">
+            <div class="col-xxl-6 col-md-6">
               <div class="card info-card sales-card">
 
                 <div class="filter">
@@ -226,7 +226,7 @@
             </div><!-- End Sales Card -->
 
             <!-- Revenue Card -->
-            <div class="col-xxl-4 col-md-6">
+            <div class="col-xxl-6 col-md-6">
               <div class="card info-card revenue-card">
 
                 <div class="filter">

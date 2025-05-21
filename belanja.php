@@ -34,38 +34,8 @@
 
     <!-- HEADER -->
     <header id="header" class="header-area style-01 layout-03">
-        <div class="header-top bg-main hidden-xs">
-            <div class="container">
-                <div class="top-bar left">
-                    <ul class="horizontal-menu">
-                        <li><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i>Organic@company.com</a></li>
-                        <li><a href="#">Free Shipping for all Order of $99</a></li>
-                    </ul>
-                </div>
-                <div class="top-bar right">
-                    <ul class="social-list">
-                        <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                        <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                        <li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
-                    </ul>
-                    <ul class="horizontal-menu">
-                        <li class="horz-menu-item currency">
-                            <select name="currency">
-                                <option value="eur">€ EUR (Euro)</option>
-                                <option value="usd" selected>$ USD (Dollar)</option>
-                                <option value="usd">£ GBP (Pound)</option>
-                                <option value="usd">¥ JPY (Yen)</option>
-                            </select>
+        <div class="header-top bg-main hidden-xs">           
                         </li>
-                        <li class="horz-menu-item lang">
-                            <select name="language">
-                                <option value="fr">French (EUR)</option>
-                                <option value="en" selected>English (USD)</option>
-                                <option value="ger">Germany (GBP)</option>
-                                <option value="jp">Japan (JPY)</option>
-                            </select>
-                        </li>
-                        <li><a href="login.html" class="login-link"><i class="biolife-icon icon-login"></i>Login/Register</a></li>
                     </ul>
                 </div>
             </div>
@@ -79,9 +49,9 @@
                     <div class="col-lg-6 col-md-7 hidden-sm hidden-xs">
                         <div class="primary-menu">
                             <ul class="menu biolife-menu clone-main-menu clone-primary-menu" id="primary-menu" data-menuname="main menu">
-                                <li class="menu-item"><a href="index-2.html">Home</a></li>
+                                <li class="menu-item"><a href="index-2.html">Beranda</a></li>
                                 <li class="menu-item menu-item-has-children has-megamenu">
-                                    <a href="#" class="menu-name" data-title="Shop" >Shop</a>
+
                                     <div class="wrap-megamenu lg-width-900 md-width-750">
                                         <div class="mega-content">
                                             <div class="col-lg-3 col-md-3 col-xs-12 md-margin-bottom-0 xs-margin-bottom-25">
@@ -135,39 +105,7 @@
                                         </div>
                                     </div>
                                 </li>
-                                <li class="menu-item menu-item-has-children has-child">
-                                    <a href="#" class="menu-name" data-title="Products">Products</a>
-                                    <ul class="sub-menu">
-                                        <li class="menu-item"><a href="#">Omelettes</a></li>
-                                        <li class="menu-item"><a href="#">Breakfast Scrambles</a></li>
-                                        <li class="menu-item menu-item-has-children has-child"><a href="#" class="menu-name" data-title="Eggs & other considerations">Eggs & other considerations</a>
-                                            <ul class="sub-menu">
-                                                <li class="menu-item"><a href="#">Classic Breakfast</a></li>
-                                                <li class="menu-item"><a href="#">Huevos Rancheros</a></li>
-                                                <li class="menu-item"><a href="#">Everything Egg Sandwich</a></li>
-                                                <li class="menu-item"><a href="#">Egg Sandwich</a></li>
-                                                <li class="menu-item"><a href="#">Vegan Burrito</a></li>
-                                                <li class="menu-item"><a href="#">Biscuits and Gravy</a></li>
-                                                <li class="menu-item"><a href="#">Bacon Avo Egg Sandwich</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="menu-item"><a href="#">Griddle</a></li>
-                                        <li class="menu-item menu-item-has-children has-child"><a href="#" class="menu-name" data-title="Sides & Extras">Sides & Extras</a>
-                                            <ul class="sub-menu">
-                                                <li class="menu-item"><a href="#">Breakfast Burrito</a></li>
-                                                <li class="menu-item"><a href="#">Crab Cake Benedict</a></li>
-                                                <li class="menu-item"><a href="#">Corned Beef Hash</a></li>
-                                                <li class="menu-item"><a href="#">Steak & Eggs</a></li>
-                                                <li class="menu-item"><a href="#">Oatmeal</a></li>
-                                                <li class="menu-item"><a href="#">Fruit & Yogurt Parfait</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="menu-item"><a href="#">Biscuits</a></li>
-                                        <li class="menu-item"><a href="#">Seasonal Fruit Plate</a></li>
-                                    </ul>
-                                </li>
-                                <li class="menu-item menu-item-has-children has-megamenu">
-                                    <a href="#" class="menu-name" data-title="Demo">Demo</a>
+                                
                                     <div class="wrap-megamenu lg-width-800 md-width-750">
                                         <div class="mega-content">
                                             <div class="col-lg-3 col-md-3 col-xs-12 md-margin-bottom-0 xs-margin-bottom-25">
@@ -232,7 +170,7 @@
                                     </div>
                                 </li>
                                 <li class="menu-item menu-item-has-children has-megamenu">
-                                    <a href="#" class="menu-name" data-title="Blog">Blog</a>
+                                    <a href="#" class="menu-name" data-title=>Belanja</a>
                                     <div class="wrap-megamenu lg-width-800 md-width-750">
                                         <div class="mega-content">
                                             <div class="col-lg-3 col-md-3 col-xs-6">
@@ -303,7 +241,7 @@
                                         </div>
                                     </div>
                                 </li>
-                                <li class="menu-item"><a href="contact.html">Contact</a></li>
+                                <li class="menu-item"><a href="contact.html">Hubungi kami</a></li>
                             </ul>
                         </div>
                     </div>
@@ -334,8 +272,8 @@
                             <div class="wishlist-block hidden-sm hidden-xs">
                                 <a href="#" class="link-to">
                                     <span class="icon-qty-combine">
-                                        <i class="icon-heart-bold biolife-icon"></i>
-                                        <span class="qty">4</span>
+                                       
+                                    
                                     </span>
                                 </a>
                             </div>
@@ -344,10 +282,10 @@
                                     <a href="javascript:void(0)" class="link-to">
                                             <span class="icon-qty-combine">
                                                 <i class="icon-cart-mini biolife-icon"></i>
-                                                <span class="qty">8</span>
+                                                <span class="qty">0</span>
                                             </span>
-                                        <span class="title">My Cart -</span>
-                                        <span class="sub-total">$0.00</span>
+                                        <span class="title">Keranjang</span>
+                                    
                                     </a>
                                     <div class="cart-content">
                                         <div class="cart-inner">
@@ -494,7 +432,7 @@
                                     <span class="line-2"></span>
                                     <span class="line-3"></span>
                                 </span>
-                                <span class="menu-title">All departments</span>
+                                <span class="menu-title">Semua kategori</span>
                                 <span class="angle" data-tgleclass="fa fa-caret-down"><i class="fa fa-caret-up" aria-hidden="true"></i></span>
                             </div>
                             <div class="wrap-menu">
@@ -756,24 +694,12 @@
                         <div class="header-search-bar layout-01">
                             <form action="#" class="form-search" name="desktop-seacrh" method="get">
                                 <input type="text" name="s" class="input-text" value="" placeholder="Search here...">
-                                <select name="category">
-                                    <option value="-1" selected>All Categories</option>
-                                    <option value="vegetables">Vegetables</option>
-                                    <option value="fresh_berries">Fresh Berries</option>
-                                    <option value="ocean_foods">Ocean Foods</option>
-                                    <option value="butter_eggs">Butter & Eggs</option>
-                                    <option value="fastfood">Fastfood</option>
-                                    <option value="fresh_meat">Fresh Meat</option>
-                                    <option value="fresh_onion">Fresh Onion</option>
-                                    <option value="papaya_crisps">Papaya & Crisps</option>
-                                    <option value="oatmeal">Oatmeal</option>
-                                </select>
                                 <button type="submit" class="btn-submit"><i class="biolife-icon icon-search"></i></button>
                             </form>
                         </div>
                         <div class="live-info">
-                            <p class="telephone"><i class="fa fa-phone" aria-hidden="true"></i><b class="phone-number">(+900) 123 456 7891</b></p>
-                            <p class="working-time">Mon-Fri: 8:30am-7:30pm; Sat-Sun: 9:30am-4:30pm</p>
+                            <p class="telephone"><i class="fa fa-phone" aria-hidden="true"></i><b class="phone-number">(+62) 889 5596 899</b></p>
+                            <p class="working-time">Senin - Sabtu: 08:00am-09:00pm</p>
                         </div>
                     </div>
                 </div>
@@ -783,16 +709,15 @@
 
     <!--Hero Section-->
     <div class="hero-section hero-background">
-        <h1 class="page-title">Organic Fruits</h1>
+        <h1 class="page-title">Belanja</h1>
     </div>
 
     <!--Navigation section-->
     <div class="container">
         <nav class="biolife-nav">
             <ul>
-                <li class="nav-item"><a href="index-2.html" class="permal-link">Home</a></li>
-                <li class="nav-item"><a href="#" class="permal-link">Natural Organic</a></li>
-                <li class="nav-item"><span class="current-page">Fresh Fruit</span></li>
+                <li class="nav-item"><a href="#" class="permal-link">Beranda</a></li>
+                <li class="nav-item"><span class="current-page">Belanja</span></li>
             </ul>
         </nav>
     </div>
@@ -946,7 +871,7 @@
                                 <div class="contain-product layout-02">
                                     <div class="product-thumb">
                                         <a href="#" class="link-to-product">
-                                            <img src="assets/images/products/p-21.jpg" alt="dd" width="270" height="270" class="product-thumnail">
+                                           
                                         </a>
                                     </div>
                                     <div class="info">
@@ -971,31 +896,7 @@
                                     <span></span>
                                     <span></span>
                                     <span></span>
-                                </a>
-                                <div class="wrap-selectors">
-                                    <form action="#" name="frm-refine" method="get">
-                                        <span class="title-for-mobile">Refine Products By</span>
-                                        <div data-title="Price:" class="selector-item">
-                                            <select name="price" class="selector">
-                                                <option value="all">Price</option>
-                                                <option value="class-1st">Less than 5$</option>
-                                                <option value="class-2nd">$5-10$</option>
-                                                <option value="class-3rd">$10-20$</option>
-                                                <option value="class-4th">$20-45$</option>
-                                                <option value="class-5th">$45-100$</option>
-                                                <option value="class-6th">$100-150$</option>
-                                                <option value="class-7th">More than 150$</option>
-                                            </select>
-                                        </div>
-                                        <div data-title="Brand:" class="selector-item">
-                                            <select name="brad" class="selector">
-                                                <option value="all">Top brands</option>
-                                                <option value="br2">Brand first</option>
-                                                <option value="br3">Brand second</option>
-                                                <option value="br4">Brand third</option>
-                                                <option value="br5">Brand fourth</option>
-                                                <option value="br6">Brand fiveth</option>
-                                            </select>
+                               
                                         </div>
                                         <div data-title="Avalability:" class="selector-item">
                                             <select name="ability" class="selector">
@@ -1249,7 +1150,7 @@
                                 <li><a href="#" class="link-page">2</a></li>
                                 <li><a href="#" class="link-page">3</a></li>
                                 <li><span class="sep">....</span></li>
-                                <li><a href="#" class="link-page">20</a></li>
+                                <li><a href="#" class="link-page">1080</a></li>
                                 <li><a href="#" class="link-page next"><i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
                             </ul>
                         </div>
@@ -1274,11 +1175,11 @@
                                 <i class="biolife-icon icon-head-phone"></i>
                                 <p class="r-info">
                                     <span>Got Questions ?</span>
-                                    <span>(700)  9001-1909  (900) 689 -66</span>
+                                    <span>(+62) 889 5596 899</span>
                                 </p>
                             </div>
                             <div class="newsletter-block layout-01">
-                                <h4 class="title">Newsletter Signup</h4>
+
                                 <div class="form-content">
                                     <form action="#" name="new-letter-foter">
                                         <input type="email" class="input-text email" value="" placeholder="Your email here...">
@@ -1290,30 +1191,16 @@
                     </div>
                     <div class="col-lg-4 col-md-4 col-sm-6 md-margin-top-5px sm-margin-top-50px xs-margin-top-40px">
                         <section class="footer-item">
-                            <h3 class="section-title">Useful Links</h3>
+                          
                             <div class="row">
                                 <div class="col-lg-6 col-sm-6 col-xs-6">
                                     <div class="wrap-custom-menu vertical-menu-2">
-                                        <ul class="menu">
-                                            <li><a href="#">About Us</a></li>
-                                            <li><a href="#">About Our Shop</a></li>
-                                            <li><a href="#">Secure Shopping</a></li>
-                                            <li><a href="#">Delivery infomation</a></li>
-                                            <li><a href="#">Privacy Policy</a></li>
-                                            <li><a href="#">Our Sitemap</a></li>
-                                        </ul>
+                                        
                                     </div>
                                 </div>
                                 <div class="col-lg-6 col-sm-6 col-xs-6">
                                     <div class="wrap-custom-menu vertical-menu-2">
-                                        <ul class="menu">
-                                            <li><a href="#">Who We Are</a></li>
-                                            <li><a href="#">Our Services</a></li>
-                                            <li><a href="#">Projects</a></li>
-                                            <li><a href="#">Contacts Us</a></li>
-                                            <li><a href="#">Innovation</a></li>
-                                            <li><a href="#">Testimonials</a></li>
-                                        </ul>
+                                       
                                     </div>
                                 </div>
                             </div>
@@ -1321,31 +1208,31 @@
                     </div>
                     <div class="col-lg-4 col-md-4 col-sm-6 md-margin-top-5px sm-margin-top-50px xs-margin-top-40px">
                         <section class="footer-item">
-                            <h3 class="section-title">Transport Offices</h3>
+                            <h3 class="section-title">Layanan Transportasi</h3>
                             <div class="contact-info-block footer-layout xs-padding-top-10px">
                                 <ul class="contact-lines">
                                     <li>
                                         <p class="info-item">
                                             <i class="biolife-icon icon-location"></i>
-                                            <b class="desc">7563 St. Vicent Place, Glasgow, Greater Newyork NH7689, UK </b>
+                                            <b class="desc">Kedungtuban, Blora, Jawa tengah, Indonesia </b>
                                         </p>
                                     </li>
                                     <li>
                                         <p class="info-item">
                                             <i class="biolife-icon icon-phone"></i>
-                                            <b class="desc">Phone: (+067) 234 789  (+068) 222 888</b>
+                                            <b class="desc">Telepon: (+62) 889 5596 899</b>
                                         </p>
                                     </li>
                                     <li>
                                         <p class="info-item">
                                             <i class="biolife-icon icon-letter"></i>
-                                            <b class="desc">Email:  contact@company.com</b>
+                                            <b class="desc">Email:  arilgunawan007@gmail.com</b>
                                         </p>
                                     </li>
                                     <li>
                                         <p class="info-item">
                                             <i class="biolife-icon icon-clock"></i>
-                                            <b class="desc">Hours: 7 Days a week from 10:00 am</b>
+                                            <b class="desc">Hours: Senin - Sabtu 08:00 am - 09:00 pm</b>
                                         </p>
                                     </li>
                                 </ul>
@@ -1367,18 +1254,12 @@
                         <div class="separator sm-margin-top-70px xs-margin-top-40px"></div>
                     </div>
                     <div class="col-lg-6 col-sm-6 col-xs-12">
-                       <div class="copy-right-text"><p><a href="templateshub.net">Templates Hub</a></p></div>
+                       <div class="copy-right-text"><p><a href="templateshub.net">gunnnpangan</a></p></div>
 
                     </div>
                     <div class="col-lg-6 col-sm-6 col-xs-12">
                         <div class="payment-methods">
-                            <ul>
-                                <li><a href="#" class="payment-link"><img src="assets/images/card1.jpg" width="51" height="36" alt=""></a></li>
-                                <li><a href="#" class="payment-link"><img src="assets/images/card2.jpg" width="51" height="36" alt=""></a></li>
-                                <li><a href="#" class="payment-link"><img src="assets/images/card3.jpg" width="51" height="36" alt=""></a></li>
-                                <li><a href="#" class="payment-link"><img src="assets/images/card4.jpg" width="51" height="36" alt=""></a></li>
-                                <li><a href="#" class="payment-link"><img src="assets/images/card5.jpg" width="51" height="36" alt=""></a></li>
-                            </ul>
+                           
                         </div>
                     </div>
                 </div>
@@ -1425,7 +1306,7 @@
             <div class="glb-item my-account">
                 <b class="title">My Account</b>
                 <ul class="list">
-                    <li class="list-item"><a href="#">Login/register</a></li>
+                    <li class="list-item"><a href="#">Belanja</a></li>
                     <li class="list-item"><a href="#">Wishlist <span class="index">(8)</span></a></li>
                     <li class="list-item"><a href="#">Checkout</a></li>
                 </ul>

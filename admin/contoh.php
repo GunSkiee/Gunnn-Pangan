@@ -1,11 +1,3 @@
-
-<?php
-
-include "koneksi.php";
-
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -36,7 +28,6 @@ include "koneksi.php";
 
     <!-- Template Main CSS File -->
     <link href="assets/css/style.css" rel="stylesheet">
-
 </head>
 
 <body>
@@ -46,18 +37,19 @@ include "koneksi.php";
 
         <div class="d-flex align-items-center justify-content-between">
             <a href="index.php" class="logo d-flex align-items-center">
-                <img src="assets/img/acc.png" alt="">
+                <img src="assets/img/logo.png" alt="">
                 <span class="d-none d-lg-block">gunnnpangan</span>
             </a>
             <i class="bi bi-list toggle-sidebar-btn"></i>
         </div><!-- End Logo -->
+        
 
         <div class="search-bar">
-            <form class="search-form d-flex align-items-center" method="GET" action="">
-                <input type="text" name="query" placeholder="Search" title="Enter search keyword" value="<?php echo isset($_GET['query']) ? htmlspecialchars($_GET['query']) : ''; ?>">
+            <form class="search-form d-flex align-items-center" method="POST" action="#">
+                <input type="text" name="query" placeholder="Search" title="Enter search keyword">
                 <button type="submit" title="Search"><i class="bi bi-search"></i></button>
             </form>
-        </div>
+        </div><!-- End Search Bar -->
 
         <nav class="header-nav ms-auto">
             <ul class="d-flex align-items-center">
@@ -68,20 +60,27 @@ include "koneksi.php";
                     </a>
                 </li><!-- End Search Icon-->
 
-                <li class="nav-item dropdown">
                 <li class="nav-item dropdown pe-3">
 
                     <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
                         <img src="assets/img/obito.jpg" alt="Profile" class="rounded-circle">
+                        <!-- profile-img.jpg diganti dengan foto kalian -->
                     </a><!-- End Profile Iamge Icon -->
 
                     <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
                         <li class="dropdown-header">
-                            <h6><?php echo isset($_SESSION['username']) ? htmlspecialchars($_SESSION['username']) : 'Guest'; ?></h6>
+                            <h6>Gunawan</h6>
                             <span>Admin</span>
                         </li>
                         <li>
-                            <a class="dropdown-item d-flex align-items-center" href="logout.php">
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item d-flex align-items-center" href="#">
                                 <i class="bi bi-box-arrow-right"></i>
                                 <span>Sign Out</span>
                             </a>
@@ -95,8 +94,7 @@ include "koneksi.php";
 
     </header><!-- End Header -->
 
-    <!-- ======= Sidebar ======= -->
-     <aside id="sidebar" class="sidebar">
+    <aside id="sidebar" class="sidebar">
 
         <ul class="sidebar-nav" id="sidebar-nav">
 
@@ -146,7 +144,7 @@ include "koneksi.php";
                     <i class="bi bi-dash-circle"></i>
                     <span>Pengguna</span>
                 </a>
-            </li><!-- End Pengguna Page Nav -->
+            </li><!-- End pengguna Page Nav -->
         </ul>
 
     </aside><!-- End Sidebar-->
@@ -177,40 +175,38 @@ include "koneksi.php";
 
         <section class="section">
             <div class="row">
+
                 <div class="col-lg-12">
+
                     <div class="card">
                         <div class="card-body">
+
                             <!-- Table with stripped rows -->
                             <table class="table table-striped mt-2">
                                 <thead>
                                     <tr>
-                                        <th>No</th>
-                                        <th>Nama Produk</th>
-                                        <th>Harga</th>
-                                        <th>Stok</th>
-                                        <th>Deskripsi</th>
-                                        <th>Kategori</th>
-                                        <th>Gambar</th>
-                                        <th>Aksi</th>
+                                        <th scope="col">No</th>
+                                        <th scope="col">Nama Produk</th>
+                                        <th scope="col">Harga</th>
+                                        <th scope="col">Stok</th>
+                                        <th scope="col">Nama Kategori</th>
+                                        <th scope="col">Gambar</th>
+                                        <th scope="col">Aksi</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <?php
+                                <?php
                                     include "koneksi.php";
                                     $no = 1;
-
-                                    // Ambil keyword pencarian dari GET
+                                    
+                                    // Ambil keyword penacarian dari GET
                                     $query = isset($_GET['query']) ? mysqli_real_escape_string($koneksi, $_GET['query']) : '';
 
-                                    // Tambahkan WHERE jika query tidak kosong
-                                    $sql_query = "SELECT tb_produk.*, tb_kategori.nm_ktg
-              FROM tb_produk 
-              LEFT JOIN tb_kategori ON tb_produk.id_ktg = tb_kategori.id_ktg";
+                                    // Tambahkan Where jika query tidak kosong
+                                    $sql_query = "SELECT tb_produk.*, tb_kategori.nm_ktg FROM tb_produk LEFT JOIN tb_kategori ON tb_produk.id_ktg = tb_kategori.id_ktg";
 
                                     if (!empty($query)) {
-                                        $sql_query .= " WHERE tb_produk.nm_produk LIKE '%$query%' 
-                    OR tb_kategori.nm_ktg LIKE '%$query%'
-                    OR tb_produk.desk LIKE '%$query%'";
+                                        $sql_query .= " WHERE tb_produk.nm_produk LIKE '%$query%' OR tb_kategori.nm_ktg LIKE '%$query%' OR tb_produk.desk LIKE '%$query%'";
                                     }
 
                                     $sql = mysqli_query($koneksi, $sql_query);
@@ -224,7 +220,7 @@ include "koneksi.php";
                                                 <td>Rp <?php echo number_format($hasil['harga'], 0, ',', '.'); ?></td>
                                                 <td><?php echo $hasil['stok']; ?></td>
                                                 <td><?php echo $hasil['desk']; ?></td>
-                                                <td><?php echo $hasil['nm_ktg']; ?></td>
+                                                <td><?php echo $hasil['nm_kategori']; ?></td>
                                                 <td>
                                                     <?php if (!empty($hasil['gambar'])) { ?>
                                                         <img src="produk_img/<?php echo $hasil['gambar']; ?>" width="100">
@@ -236,7 +232,7 @@ include "koneksi.php";
                                                     <a href="e_produk.php?id=<?php echo $hasil['id_produk']; ?>" class="btn btn-warning">
                                                         <i class="bi bi-pencil-square"></i>
                                                     </a>
-                                                    <a href="h_produk.php?id=<?php echo $hasil['id_produk']; ?>" class="btn btn-danger" onclick="return confirm('Apakah Anda Yakin Ingin Menghapus Data?')">
+                                                    <a href="h_produk.php?id=<?php echo $hasil['id_produk']; ?>" class="btn btn-danger" onclick="return confirm('Apakah Anda yakin ingin menghapus data?')">
                                                         <i class="bi bi-trash"></i>
                                                     </a>
                                                 </td>
@@ -246,7 +242,7 @@ include "koneksi.php";
                                     } else {
                                         ?>
                                         <tr>
-                                            <td colspan="8" class="text-center">Belum Ada Data</td>
+                                            <td colspan="8" class="text-center">Data tidak ditemukan</td>
                                         </tr>
                                     <?php
                                     }
@@ -257,7 +253,6 @@ include "koneksi.php";
 
                         </div>
                     </div>
-
                 </div>
             </div>
         </section>
@@ -270,7 +265,7 @@ include "koneksi.php";
             &copy; Copyright <strong><span>gunnnpangan</span></strong>. All Rights Reserved
         </div>
         <div class="credits">
-          Designed by <a href="https://www.instagram.com/4rlgnwn?igsh=MWx3bG84c2F6MGJrdw==">4rlgnwn</a>
+        Designed by <a href="https://www.instagram.com/4rlgnwn?igsh=MWx3bG84c2F6MGJrdw==" target="blank">4rlgnwn</a>
         </div>
     </footer><!-- End Footer -->
 
