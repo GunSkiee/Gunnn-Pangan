@@ -64,12 +64,12 @@
                 <li class="nav-item dropdown pe-3">
 
                     <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
-                        <img src="assets/img/user.jpg" alt="Profile" class="rounded-circle">
+                        <img src="assets/img/obito.jpg" alt="Profile" class="rounded-circle">
                     </a><!-- End Profile Iamge Icon -->
 
                     <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
                         <li class="dropdown-header">
-                            <h6><?php echo isset($_SESSION['username']) ? htmlspecialchars($_SESSION['username']) : 'Guest'; ?></h6>
+                            <h6><?php echo isset($_SESSION['username']) ? htmlspecialchars($_SESSION['username']) : 'Gunawan'; ?></h6>
                             <span>Admin</span>
                         </li>
                         <li>
@@ -92,56 +92,61 @@
     </header><!-- End Header -->
 
     <!-- ======= Sidebar ======= -->
-      <aside id="sidebar" class="sidebar">
+  <aside id="sidebar" class="sidebar">
 
-        <ul class="sidebar-nav" id="sidebar-nav">
+    <ul class="sidebar-nav" id="sidebar-nav">
 
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="index.php">
-                <i class="bi bi-house-fill"></i>
-                    <span>Beranda</span>
-                </a>
-            </li><!-- End Dashboard Nav -->
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="kategori.php">
-                <i class="bi bi-clipboard-data"></i>
-                    <span>Kategori</span>
-                </a>
-            </li><!-- End Kategori Page Nav -->
+      <li class="nav-item">
+        <a class="nav-link " href="index.php">
+        <i class="bi bi-house-fill"></i>
+          <span>Beranda</span>
+        </a>
+      </li><!-- End Beranda Nav -->
 
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="produk.php">
-                <i class="bi bi-cart-plus-fill"></i>
-                    <span>Produk</span>
-                </a>
-            </li><!-- End Produk Page Nav -->
+     
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="kategori.php">
+        <i class="bi bi-clipboard-data"></i>
+          <span>Kategori Produk</span>
+        </a>
+      </li><!-- End Kategori Nav -->
 
-            <li class="nav-item">
-                <a class="nav-link" href="keranjang.php">
-                <i class="bi bi-bag-check"></i>
-                    <span>Keranjang</span>
-                </a>
-            </li><!-- End Keranjang Page Nav -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="produk.php">
+        <i class="bi bi-cart-plus-fill"></i>
+          <span>Produk</span>
+        </a>
+      </li><!-- End Produk Page Nav -->
 
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="transaksi.php">
-                    <i class="bi bi-card-list"></i>
-                    <span>Transaksi</span>
-                </a>
-            </li><!-- End Transaksi Page Nav -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="keranjang.php">
+        <i class="bi bi-bag-check"></i>
+          <span>Keranjang</span>
+        </a>
+      </li><!-- End Keranjang Page Nav -->
 
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="laporan.php">
-                    <i class="bi bi-box-arrow-in-right"></i>
-                    <span>Laporan</span>
-                </a>
-            </li><!-- End Laporan Page Nav -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="transaksi.php">
+        <i class="bi bi-wallet"></i>
+          <span>Transaksi</span>
+        </a>
+      </li><!-- End Transaksi Page Nav -->
 
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="pengguna.php">
-                    <i class="bi bi-dash-circle"></i>
-                    <span>Pengguna</span>
-                </a>
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="laporan.php">
+        <i class="bi bi-messenger"></i>
+          <span>Laporan</span>
+        </a>
+      </li><!-- End Laporan Page Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="pengguna.php">
+        <i class="bi bi-person-circle"></i>
+          <span>Pengguna</span>
+        </a>
+      </li><!-- End Pengguna Page Nav -->
+
+    </ul>
     </aside><!-- End Sidebar-->
 
     <main id="main" class="main">

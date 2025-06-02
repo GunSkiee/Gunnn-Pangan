@@ -99,64 +99,62 @@
       </ul>
     </nav><!-- End Icons Navigation -->
 
+    </header><!-- End Header -->
 
-
-
-  </header><!-- End Header -->
   <!-- ======= Sidebar ======= -->
   <aside id="sidebar" class="sidebar">
-<ul class="sidebar-nav" id="sidebar-nav">
 
-  <li class="nav-item">
-    <a class="nav-link " href="index.php">
-    <i class="bi bi-house-fill"></i>
-      <span>Beranda</span>
-    </a>
-  </li><!-- End Dashboard Nav -->
+    <ul class="sidebar-nav" id="sidebar-nav">
 
-  <li class="nav-item">
-    <a class="nav-link collapsed" href="kategori.php">
-    <i class="bi bi-clipboard-data"></i>
-      <span>Kategori</span>
-    </a>
-  </li><!-- End Profile Page Nav -->
+      <li class="nav-item">
+        <a class="nav-link " href="index.php">
+        <i class="bi bi-house-fill"></i>
+          <span>Beranda</span>
+        </a>
+      </li><!-- End Beranda Nav -->
 
-  <li class="nav-item">
-    <a class="nav-link collapsed" href="produk.php">
-    <i class="bi bi-cart-plus-fill"></i>
-      <span>Produk</span>
-    </a>
-  </li><!-- End F.A.Q Page Nav -->
+     
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="kategori.php">
+        <i class="bi bi-clipboard-data"></i>
+          <span>Kategori Produk</span>
+        </a>
+      </li><!-- End Kategori Nav -->
 
-  <li class="nav-item">
-    <a class="nav-link collapsed" href="keranjang.php">
-    <i class="bi bi-bag-check"></i>
-      <span>Keranjang</span>
-    </a>
-  </li><!-- End Contact Page Nav -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="produk.php">
+        <i class="bi bi-cart-plus-fill"></i>
+          <span>Produk</span>
+        </a>
+      </li><!-- End Produk Page Nav -->
 
-  <li class="nav-item">
-    <a class="nav-link collapsed" href="transaksi.php">
-    <i class="bi bi-wallet"></i>
-      <span>Transaksi</span>
-    </a>
-  </li><!-- End Register Page Nav -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="keranjang.php">
+        <i class="bi bi-bag-check"></i>
+          <span>Keranjang</span>
+        </a>
+      </li><!-- End Keranjang Page Nav -->
 
-  <li class="nav-item">
-    <a class="nav-link collapsed" href="laporan.php">
-    <i class="bi bi-messenger"></i>
-      <span>Laporan</span>
-    </a>
-  </li><!-- End Login Page Nav -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="transaksi.php">
+        <i class="bi bi-wallet"></i>
+          <span>Transaksi</span>
+        </a>
+      </li><!-- End Transaksi Page Nav -->
 
-  <li class="nav-item">
-    <a class="nav-link collapsed" href="pengguna.php">
-    <i class="bi bi-person-circle"></i>
-      <span>Pengguna</span>
-    </a>
-  </li><!-- End Error 404 Page Nav -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="laporan.php">
+        <i class="bi bi-messenger"></i>
+          <span>Laporan</span>
+        </a>
+      </li><!-- End Laporan Page Nav -->
 
-
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="pengguna.php">
+        <i class="bi bi-person-circle"></i>
+          <span>Pengguna</span>
+        </a>
+      </li><!-- End Pengguna Page Nav -->
 </ul>
 
 </aside><!-- End Sidebar-->
