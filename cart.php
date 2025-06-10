@@ -31,7 +31,7 @@ $result_lainnya = $koneksi->query($query_lainnya);
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Keranjang - gunnnpangan</title>
+    <title>Keranjang - GunnnPangan</title>
     <link href="https://fonts.googleapis.com/css?family=Cairo:400,600,700&amp;display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Poppins:600&amp;display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400i,700i" rel="stylesheet">
@@ -132,7 +132,7 @@ $result_lainnya = $koneksi->query($query_lainnya);
                     <div class="col-lg-3 col-md-3 col-6 d-flex align-items-center">
                         <a href="index.php" class="biolife-logo"><img src="assets/images/favicon.png"
                                 alt="biolife logo">
-                            <b style="font-size: 150% ; color: green;">gunnnpangan</b></a>
+                            <b style="font-size: 150% ; color: green;">GunnnPangan</b></a>
                     </div>
 
                     <div class="col-lg-6 col-md-6 d-none d-md-block text-center">
@@ -169,10 +169,6 @@ $result_lainnya = $koneksi->query($query_lainnya);
                                     <div class="minicart-contain">
                                         <a href="javascript:void(0)" class="link-to">
                                             <span class="icon-qty-combine">
-                                                <i class="icon-cart-mini biolife-icon"></i>
-                                                <span class="qty"><?= $jumlah_item ?></span>
-                                            </span>
-                                            <span class="title">Keranjang</span>
                                         </a>
                                         <div class="cart-content">
                                             <div class="cart-inner">
@@ -193,34 +189,6 @@ $result_lainnya = $koneksi->query($query_lainnya);
                                                             $total_harga = $row['harga'] * $row['qty'];
                                                             $subtotal += $total_harga;
                                                             ?>
-                                                            <li>
-                                                                <div class="minicart-item">
-                                                                    <div class="thumb">
-                                                                        <a href="#"><img
-                                                                                src="admin/produk_img/<?= $row['gambar'] ?>"
-                                                                                width="90" height="90"
-                                                                                alt="<?= $row['nm_produk'] ?>"></a>
-                                                                    </div>
-                                                                    <div class="left-info">
-                                                                        <div class="product-title"><a href="#"
-                                                                                class="product-name"><?= $row['nm_produk'] ?></a>
-                                                                        </div>
-                                                                        <div class="price">
-                                                                            <ins><span class="price-amount"><span
-                                                                                        class="currencySymbol">Rp.</span><?= number_format($row['harga'], 0, ',', '.') ?></span></ins>
-                                                                        </div>
-                                                                        <div class="qty">
-                                                                            <label>Qty:</label>
-                                                                            <input type="number" class="input-qty"
-                                                                                value="<?= $row['qty'] ?>" disabled>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="action">
-                                                                        <a href="hapus_item.php?id=<?= $row['id_pesanan'] ?>"><i
-                                                                                class="fa fa-trash-o" aria-hidden="true"></i></a>
-                                                                    </div>
-                                                                </div>
-                                                            </li>
                                                             <?php
                                                         endwhile;
                                                     } else {
@@ -547,7 +515,7 @@ $result_lainnya = $koneksi->query($query_lainnya);
                                 <section class="footer-item">
                                     <a href="index.php" class="biolife-logo"><img src="assets/images/favicon.png"
                                             alt="biolife logo"><b
-                                            style="font-size: 150% ; color: green;">PantryNusantara</b></a>
+                                            style="font-size: 150% ; color: green;">GunnnPangan</b></a>
                                     <div class="footer-phone-info">
                                         <i class="biolife-icon icon-head-phone"></i>
                                         <p class="r-info">
@@ -571,48 +539,33 @@ $result_lainnya = $koneksi->query($query_lainnya);
                                             <li>
                                                 <p class="info-item">
                                                     <i class="biolife-icon icon-location"></i>
-                                                    <b class="desc">Tanjung, Kedungtuban, Blora, Jawa Tengah, Indonesia</b>
-                                                </p>
-                                            </li>
-                                            <li>
-                                                <p class="info-item">
-                                                    <i class="biolife-icon icon-phone"></i>
-                                                    <b class="desc">Telepon: 0838-6520-9331</b>
-                                                </p>
-                                            </li>
-                                            <li>
-                                                <p class="info-item">
-                                                    <i class="biolife-icon icon-letter"></i>
-                                                    <b class="desc">Email: agunawan@gmail.com</b>
-                                                </p>
-                                            </li>
-                                            <li>
-                                                <p class="info-item">
-                                                    <i class="biolife-icon icon-clock"></i>
-                                                    <b class="desc">Jam Buka: Senin - Sabtu, Mulai Pukul 08.00 - 20.00</b>
-                                                </p>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="biolife-social inline">
-                                        <ul class="socials">
-                                            <li><a href="#" title="twitter" class="socail-btn"><i class="fa fa-twitter"
-                                                        aria-hidden="true"></i></a>
-                                            </li>
-                                            <li><a href="#" title="facebook" class="socail-btn"><i
-                                                        class="fa fa-facebook" aria-hidden="true"></i></a>
-                                            </li>
-                                            <li><a href="#" title="pinterest" class="socail-btn"><i
-                                                        class="fa fa-pinterest" aria-hidden="true"></i></a>
-                                            </li>
-                                            <li><a href="#" title="youtube" class="socail-btn"><i class="fa fa-youtube"
-                                                        aria-hidden="true"></i></a>
-                                            </li>
-                                            <li><a href="https://www.instagram.com/4rlgnwn?igsh=MWx3bG84c2F6MGJrdw==" title="instagram"
-                                                    class="socail-btn"><i class="fa fa-instagram"
-                                                        aria-hidden="true"></i></a>
-                                            </li>
-                                        </ul>
+                                            <b class="desc">Tanjung-Kedungtuban, Blora, Jawa Tengah. Indonesia</b>
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p class="info-item">
+                                            <i class="biolife-icon icon-phone"></i>
+                                            <b class="desc">Telepon: 0838-6520-9331</b>
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p class="info-item">
+                                            <i class="biolife-icon icon-letter"></i>
+                                            <b class="desc">Email: gunnnpangan@gmail.com</b>
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p class="info-item">
+                                            <i class="biolife-icon icon-clock"></i>
+                                            <b class="desc">Jam Buka: Senin - Kamis, Mulai Pukul 08.00 - 20.00</b>
+                                        </p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="biolife-social inline">
+                                <ul class="socials">
+                                   <li><a href="https://www.instagram.com/4rlgnwn?igsh=MWx3bG84c2F6MGJrdw==" title="instagram" class="socail-btn"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                                </ul>
                                     </div>
                                 </section>
                             </div>

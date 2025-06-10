@@ -29,7 +29,7 @@ if (isset($_POST['simpan'])) {
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Kategori - gunnnpangan Admin</title>
+  <title>Kategori - GunnnPangan Admin</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -68,9 +68,9 @@ if (isset($_POST['simpan'])) {
   <header id="header" class="header fixed-top d-flex align-items-center">
 
     <div class="d-flex align-items-center justify-content-between">
-      <a href="index.html" class="logo d-flex align-items-center">
+      <a href="index.php" class="logo d-flex align-items-center">
         <img src="assets/img/logo.png" alt="">
-        <span class="d-none d-lg-block">gunnnpangan</span>
+        <span class="d-none d-lg-block">GunnnPangan</span>
       </a>
       <i class="bi bi-list toggle-sidebar-btn"></i>
     </div><!-- End Logo -->
@@ -78,17 +78,21 @@ if (isset($_POST['simpan'])) {
     <nav class="header-nav ms-auto">
       <ul class="d-flex align-items-center">
 
+        <li class="nav-item dropdown">
+
+    
+
         <li class="nav-item dropdown pe-3">
 
           <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
-            <img src="assets/img/naro.jpeg" alt="Profile" class="rounded-circle">
-            <span class="d-none d-md-block dropdown-toggle ps-2"></span>
+            <img src="assets/img/4rl.jpg" alt="Profile" class="rounded-circle">
+            
           </a><!-- End Profile Iamge Icon -->
 
           <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
             <li class="dropdown-header">
-              <h6>Gunawan</h6>
-              <span>Web Designer</span>
+              <h6><?php echo isset($_SESSION['username']) ? htmlspecialchars($_SESSION['username']) : 'Gunawan'; ?></h6>
+              <span>Admin</span>
             </li>
             <li>
               <hr class="dropdown-divider">
@@ -109,64 +113,61 @@ if (isset($_POST['simpan'])) {
 
   </header><!-- End Header -->
 
-  <!-- ======= Sidebar ======= -->
-  <aside id="sidebar" class="sidebar">
+ <!-- ======= Sidebar ======= -->
+     <aside id="sidebar" class="sidebar">
 
-    <ul class="sidebar-nav" id="sidebar-nav">
+        <ul class="sidebar-nav" id="sidebar-nav">
 
-      <li class="nav-item">
-        <a class="nav-link " href="index.php">
-        <i class="bi bi-house-fill"></i>
-          <span>Beranda</span>
-        </a>
-      </li><!-- End Beranda Nav -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="index.php">
+                <i class="bi bi-house-fill"></i>
+                    <span>Beranda</span>
+                </a>
+            </li><!-- End Dashboard Nav -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="kategori.php">
+                <i class="bi bi-clipboard-data"></i>
+                    <span>Kategori</span>
+                </a>
+            </li><!-- End Kategori Page Nav -->
 
-     
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="kategori.php">
-        <i class="bi bi-clipboard-data"></i>
-          <span>Kategori Produk</span>
-        </a>
-      </li><!-- End Kategori Nav -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="produk.php">
+                <i class="bi bi-cart-plus-fill"></i>
+                    <span>Produk</span>
+                </a>
+            </li><!-- End Produk Page Nav -->
 
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="produk.php">
-        <i class="bi bi-cart-plus-fill"></i>
-          <span>Produk</span>
-        </a>
-      </li><!-- End Produk Page Nav -->
+            <li class="nav-item">
+                <a class="nav-link" href="keranjang.php">
+                <i class="bi bi-bag-check"></i>
+                    <span>Keranjang</span>
+                </a>
+            </li><!-- End Keranjang Page Nav -->
 
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="keranjang.php">
-        <i class="bi bi-bag-check"></i>
-          <span>Keranjang</span>
-        </a>
-      </li><!-- End Keranjang Page Nav -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="transaksi.php">
+                    <i class="bi bi-card-list"></i>
+                    <span>Transaksi</span>
+                </a>
+            </li><!-- End Transaksi Page Nav -->
 
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="transaksi.php">
-        <i class="bi bi-wallet"></i>
-          <span>Transaksi</span>
-        </a>
-      </li><!-- End Transaksi Page Nav -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="laporan.php">
+                    <i class="bi bi-box-arrow-in-right"></i>
+                    <span>Laporan</span>
+                </a>
+            </li><!-- End Laporan Page Nav -->
 
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="laporan.php">
-        <i class="bi bi-messenger"></i>
-          <span>Laporan</span>
-        </a>
-      </li><!-- End Laporan Page Nav -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="pengguna.php">
+                  <i class="bi bi-person-circle"></i>
+                    <span>Pengguna</span>
+                </a>
+            </li><!-- End pengguna Page Nav -->
+        </ul>
 
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="pengguna.php">
-        <i class="bi bi-person-circle"></i>
-          <span>Pengguna</span>
-        </a>
-      </li>
-      <!-- End Pengguna Page Nav -->
-    </ul>
-
-  </aside><!-- End Sidebar-->
+    </aside><!-- End Sidebar-->
 
   <main id="main" class="main">
 
@@ -210,15 +211,10 @@ if (isset($_POST['simpan'])) {
   <!-- ======= Footer ======= -->
   <footer id="footer" class="footer">
     <div class="copyright">
-      &copy; Copyright <strong><span>gunnnpangan</span></strong>. All Rights Reserved
+      &copy; Copyright <strong><span>GunnnPangan</span></strong>. All Rights Reserved
     </div>
     <div class="credits">
-      <!-- All the links in the footer should remain intact. -->
-      <!-- You can delete the links only if you purchased the pro version. -->
-      <!-- Licensing information: https://bootstrapmade.com/license/ -->
-      <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/ -->
-        Designed by <a href="https://www.instagram.com/4rlgnwn?igsh=MWx3bG84c2F6MGJrdw==" target="blank">4rlgnwn</a>
-    </div>
+       Designed by <a href="https://www.instagram.com/4rlgnwn?igsh=MWx3bG84c2F6MGJrdw==" target="blank">4rlgnwn</a>
   </footer><!-- End Footer -->
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>

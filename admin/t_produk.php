@@ -17,25 +17,24 @@ if (isset($_POST['simpan'])) {
     $desk = $_POST['desk'];
     $id_ktg = $_POST['id_ktg'];
 
-    // Upload Gambar
+    //upload gambar
     $imgfile = $_FILES['gambar']['name'];
-    $tmp_file = $_FILES['gambar']['tmp_name'];
+    $tmpfile = $_FILES['gambar']['tmp_name'];
     $extension = strtolower(pathinfo($imgfile, PATHINFO_EXTENSION));
 
     $dir = "produk_img/"; // Direktori penyimpanan gambar
     $allowed_extensions = array("jpg", "jpeg", "png", "webp");
-
+    
     if (!in_array($extension, $allowed_extensions)) {
-        echo "<script>alert('Format tidak valid. Hanya jpg, jpeg, png, dan webp yang diperbolehkan.');</script>";
+        echo "<script>alert('Format tidak valid. Hanya JPG, JPEG, PNG, dan WEBP yang diperbolehkan.');</script>";
     } else {
         // Rename file gambar agar unik
         $imgnewfile = md5(time() . $imgfile) . "." . $extension;
-        move_uploaded_file($tmp_file, $dir . $imgnewfile);
+        move_uploaded_file($tmpfile, $dir . $imgnewfile);
 
-        // Simpan data ke database
-        $query = mysqli_query($koneksi, "INSERT INTO tb_produk (id_produk, nm_produk, harga, stok, desk, id_ktg, gambar) 
-                                         VALUES ('$id_produk', '$nm_produk', '$harga', '$stok', '$desk', '$id_ktg', '$imgnewfile')");
-
+        //Simpan data ke database
+        $query = mysqli_query($koneksi, "INSERT INTO tb_produk (id_produk, nm_produk, harga, stok, desk, id_ktg, gambar) VALUES ('$id_produk', '$nm_produk', '$harga', '$stok', '$desk', '$id_ktg', '$imgnewfile')");
+        
         if ($query) {
             echo "<script>alert('Produk berhasil ditambahkan!');</script>";
             header("refresh:0, produk.php");
@@ -46,7 +45,6 @@ if (isset($_POST['simpan'])) {
     }
 }
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -54,7 +52,7 @@ if (isset($_POST['simpan'])) {
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>Produk - Furnimart Admin</title>
+    <title>Produk - GunnnPangan Admin</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
 
@@ -87,26 +85,35 @@ if (isset($_POST['simpan'])) {
         <div class="d-flex align-items-center justify-content-between">
             <a href="index.php" class="logo d-flex align-items-center">
                 <img src="assets/img/logo.png" alt="">
-                <span class="d-none d-lg-block">Furnimart</span>
+                <span class="d-none d-lg-block">GunnnPangan</span>
             </a>
             <i class="bi bi-list toggle-sidebar-btn"></i>
         </div><!-- End Logo -->
 
         <nav class="header-nav ms-auto">
             <ul class="d-flex align-items-center">
+
                 <li class="nav-item dropdown pe-3">
 
                     <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
-                        <img src="assets/img/user.jpg" alt="Profile" class="rounded-circle">
+                        <img src="assets/img/4rl.jpg" alt="Profile" class="rounded-circle">
+                        <!-- profile-img.jpg diganti nama file gambar kalian -->
                     </a><!-- End Profile Iamge Icon -->
 
                     <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
                         <li class="dropdown-header">
-                            <h6><?php echo isset($_SESSION['username']) ? htmlspecialchars($_SESSION['username']) : 'Guest'; ?></h6>
+                            <h6><?php echo isset($_SESSION['username']) ? htmlspecialchars($_SESSION['username']) : 'arfan'; ?></h6>
                             <span>Admin</span>
                         </li>
                         <li>
-                            <a class="dropdown-item d-flex align-items-center" href="logout.php">
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item d-flex align-items-center" href="#">
                                 <i class="bi bi-box-arrow-right"></i>
                                 <span>Sign Out</span>
                             </a>
@@ -120,58 +127,58 @@ if (isset($_POST['simpan'])) {
 
     </header><!-- End Header -->
 
-    <!-- ======= Sidebar ======= -->
-    <aside id="sidebar" class="sidebar">
+  <!-- ======= Sidebar ======= -->
+     <aside id="sidebar" class="sidebar">
 
         <ul class="sidebar-nav" id="sidebar-nav">
 
             <li class="nav-item">
                 <a class="nav-link collapsed" href="index.php">
-                    <i class="bi bi-house-door"></i>
+                <i class="bi bi-house-fill"></i>
                     <span>Beranda</span>
                 </a>
-            </li><!-- End Beranda Nav -->
-
+            </li><!-- End Dashboard Nav -->
             <li class="nav-item">
                 <a class="nav-link collapsed" href="kategori.php">
-                    <i class="bi bi-tags"></i>
-                    <span>Kategori Produk</span>
+                <i class="bi bi-clipboard-data"></i>
+                    <span>Kategori</span>
                 </a>
-            </li><!-- End Kategori Produk Page Nav -->
+            </li><!-- End Kategori Page Nav -->
 
             <li class="nav-item">
-                <a class="nav-link" href="produk.php">
-                    <i class="bi bi-shop"></i>
+                <a class="nav-link collapsed" href="produk.php">
+                <i class="bi bi-cart-plus-fill"></i>
                     <span>Produk</span>
                 </a>
             </li><!-- End Produk Page Nav -->
 
             <li class="nav-item">
-                <a class="nav-link collapsed" href="keranjang.php">
-                    <i class="bi bi-cart"></i>
+                <a class="nav-link" href="keranjang.php">
+                <i class="bi bi-bag-check"></i>
                     <span>Keranjang</span>
                 </a>
             </li><!-- End Keranjang Page Nav -->
 
             <li class="nav-item">
                 <a class="nav-link collapsed" href="transaksi.php">
-                    <i class="bi bi-receipt"></i>
+                    <i class="bi bi-card-list"></i>
                     <span>Transaksi</span>
                 </a>
             </li><!-- End Transaksi Page Nav -->
 
             <li class="nav-item">
                 <a class="nav-link collapsed" href="laporan.php">
-                    <i class="bi bi-file-earmark-bar-graph"></i>
+                    <i class="bi bi-box-arrow-in-right"></i>
                     <span>Laporan</span>
                 </a>
             </li><!-- End Laporan Page Nav -->
+
             <li class="nav-item">
                 <a class="nav-link collapsed" href="pengguna.php">
-                    <i class="bi bi-people"></i>
+                  <i class="bi bi-person-circle"></i>
                     <span>Pengguna</span>
                 </a>
-            </li><!-- End Pengguna Page Nav -->
+            </li><!-- End pengguna Page Nav -->
         </ul>
 
     </aside><!-- End Sidebar-->
@@ -188,12 +195,14 @@ if (isset($_POST['simpan'])) {
                 </ol>
             </nav>
         </div><!-- End Page Title -->
-
         <section class="section">
             <div class="row">
                 <div class="col-lg-6">
+
                     <div class="card">
                         <div class="card-body">
+
+                            <!-- Vertical Form -->
                             <form class="row g-3 mt-2" method="post" enctype="multipart/form-data">
                                 <div class="col-12">
                                     <label for="nm_produk" class="form-label">Nama Produk</label>
@@ -219,9 +228,9 @@ if (isset($_POST['simpan'])) {
                                         include "koneksi.php";
                                         $query = mysqli_query($koneksi, "SELECT * FROM tb_kategori");
                                         while ($kategori = mysqli_fetch_array($query)) {
-                                            echo "<option value='{$kategori['id_ktg']}'>{$kategori['nm_ktg']}</option>";
+                                            echo "<option value='{$kategori['id_ktg']}'>$kategori[nm_ktg]</option>";
                                         }
-                                        ?>
+                                        ?> 
                                     </select>
                                 </div>
                                 <div class="col-12">
@@ -233,23 +242,24 @@ if (isset($_POST['simpan'])) {
                                     <button type="submit" class="btn btn-primary" name="simpan">Simpan</button>
                                 </div>
                             </form>
+
                         </div>
                     </div>
+
                 </div>
             </div>
         </section>
 
     </main><!-- End #main -->
 
-    <!-- ======= Footer ======= -->
-    <footer id="footer" class="footer">
-        <div class="copyright">
-            &copy; Copyright <strong><span>Furnimart</span></strong>. All Rights Reserved
-        </div>
-        <div class="credits">
-            Designed by <a href="https://instagram.com/dea.salsa.503/" target="_blank">Dea Salsabilla</a>
-        </div>
-    </footer><!-- End Footer -->
+     <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+    <div class="copyright">
+      &copy; Copyright <strong><span>GunnnPangan</span></strong>. All Rights Reserved
+    </div>
+    <div class="credits">
+       Designed by <a href="https://www.instagram.com/4rlgnwn?igsh=MWx3bG84c2F6MGJrdw==" target="blank">4rlgnwn</a>
+  </footer><!-- End Footer -->
 
     <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 

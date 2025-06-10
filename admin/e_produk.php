@@ -11,9 +11,9 @@ if (!isset($_SESSION["login"])) {
 // Cek apakah status tersedia dan pastikan user adalah admin
 if (!isset($_SESSION["status"]) || $_SESSION["status"] !== "admin") {
     echo "<script>
-    alert('Akses ditolak! Halaman ini hanya untuk Admin.');
-    window.location.href='login.php';
-  </script>";
+      alert('Akses ditolak! Halaman ini hanya untuk Admin.');
+      window.location.href='login.php';
+    </script>";
     exit;
 }
 
@@ -32,7 +32,7 @@ if (isset($_POST['update'])) {
     $harga = $_POST['harga'];
     $stok = $_POST['stok'];
     $desk = $_POST['desk'];
-    $id_kategori = $_POST['id_ktg'];
+    $id_ktg = $_POST['id_ktg'];
     $gambar_lama = $_POST['gambar_lama'];
 
     // Cek apakah ada gambar baru yang diupload
@@ -60,7 +60,7 @@ if (isset($_POST['update'])) {
     }
 
     // Update data ke database
-    $query = mysqli_query($koneksi, "UPDATE tb_produk SET nm_produk='$nm_produk', harga='$harga', stok='$stok', desk='$desk', id_ktg='$id_kategori', gambar='$imgnewfile' WHERE id_produk='$id_produk'");
+    $query = mysqli_query($koneksi, "UPDATE tb_produk SET nm_produk='$nm_produk', harga='$harga', stok='$stok', desk='$desk', id_ktg='$id_ktg', gambar='$imgnewfile' WHERE id_produk='$id_produk'");
 
     if ($query) {
         echo "<script>alert('Produk berhasil diperbarui!');</script>";
@@ -71,7 +71,6 @@ if (isset($_POST['update'])) {
     }
 }
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -79,7 +78,7 @@ if (isset($_POST['update'])) {
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>Produk - gunnnpangan Admin</title>
+    <title>Produk - GunnnPangan Admin</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
 
@@ -112,16 +111,25 @@ if (isset($_POST['update'])) {
         <div class="d-flex align-items-center justify-content-between">
             <a href="index.php" class="logo d-flex align-items-center">
                 <img src="assets/img/logo.png" alt="">
-                <span class="d-none d-lg-block">gunnnpangan</span>
+                <span class="d-none d-lg-block">GunnnPangan</span>
             </a>
             <i class="bi bi-list toggle-sidebar-btn"></i>
         </div><!-- End Logo -->
+
+
         <nav class="header-nav ms-auto">
             <ul class="d-flex align-items-center">
+
+                <li class="nav-item d-block d-lg-none">
+                    <a class="nav-link nav-icon search-bar-toggle " href="#">
+                        <i class="bi bi-search"></i>
+                    </a>
+                </li><!-- End Search Icon-->
+
                 <li class="nav-item dropdown pe-3">
 
                     <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
-                        <img src="assets/img/obito.jpg" alt="Profile" class="rounded-circle">
+                        <img src="assets/img/4rl.jpg" alt="Profile" class="rounded-circle">
                     </a><!-- End Profile Iamge Icon -->
 
                     <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
@@ -129,6 +137,11 @@ if (isset($_POST['update'])) {
                             <h6><?php echo isset($_SESSION['username']) ? htmlspecialchars($_SESSION['username']) : 'Guest'; ?></h6>
                             <span>Admin</span>
                         </li>
+
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+
                         <li>
                             <a class="dropdown-item d-flex align-items-center" href="logout.php">
                                 <i class="bi bi-box-arrow-right"></i>
@@ -145,7 +158,7 @@ if (isset($_POST['update'])) {
     </header><!-- End Header -->
 
     <!-- ======= Sidebar ======= -->
-       <aside id="sidebar" class="sidebar">
+     <aside id="sidebar" class="sidebar">
 
         <ul class="sidebar-nav" id="sidebar-nav">
 
@@ -192,10 +205,10 @@ if (isset($_POST['update'])) {
 
             <li class="nav-item">
                 <a class="nav-link collapsed" href="pengguna.php">
-                    <i class="bi bi-dash-circle"></i>
+                  <i class="bi bi-person-circle"></i>
                     <span>Pengguna</span>
                 </a>
-            </li><!-- End Pengguna Page Nav -->
+            </li><!-- End pengguna Page Nav -->
         </ul>
 
     </aside><!-- End Sidebar-->
@@ -222,19 +235,19 @@ if (isset($_POST['update'])) {
                                 <input type="hidden" name="gambar_lama" value="<?php echo $data['gambar']; ?>">
                                 <div class="col-12">
                                     <label for="nm_produk" class="form-label">Nama Produk</label>
-                                    <input type="text" class="form-control" id="nm_produk" name="nm_produk" value="<?php echo $data['nm_produk']; ?>" required>
+                                    <input type="text" class="form-control" id="nm_produk" name="nm_produk" placeholder="Masukkan Nama Produk" value="<?php echo $data['nm_produk']; ?>" required>
                                 </div>
                                 <div class="col-12">
                                     <label for="harga" class="form-label">Harga</label>
-                                    <input type="number" class="form-control" id="harga" name="harga" value="<?php echo $data['harga']; ?>" required>
+                                    <input type="number" class="form-control" id="harga" name="harga" placeholder="Masukkan Harga Produk" value="<?php echo $data['harga']; ?>" required>
                                 </div>
                                 <div class="col-12">
                                     <label for="stok" class="form-label">Stok</label>
-                                    <input type="number" class="form-control" id="stok" name="stok" value="<?php echo $data['stok']; ?>" required>
+                                    <input type="number" class="form-control" id="stok" name="stok" placeholder="Masukkan Stok Produk" value="<?php echo $data['stok']; ?>" required>
                                 </div>
                                 <div class="col-12">
                                     <label for="desk" class="form-label">Deskripsi</label>
-                                    <textarea class="form-control" id="desk" name="desk" required><?php echo $data['desk']; ?></textarea>
+                                    <textarea class="form-control" id="desk" name="desk" placeholder="Masukkan Deskripsi Produk" required><?php echo $data['desk']; ?></textarea>
                                 </div>
                                 <div class="col-12">
                                     <label for="id_ktg" class="form-label">Kategori</label>
@@ -258,8 +271,8 @@ if (isset($_POST['update'])) {
                                     <?php } ?>
                                 </div>
                                 <div class="text-center">
-                                    <button type="submit" class="btn btn-primary" name="update">Update</button>
-                                    <a href="produk.php" class="btn btn-secondary">Kembali</a>
+                                    <button type="reset" class="btn btn-secondary">Reset</button>
+                                    <button type="submit" class="btn btn-primary" name="update">Simpan</button>
                                 </div>
                             </form>
                         </div>
@@ -271,14 +284,13 @@ if (isset($_POST['update'])) {
     </main><!-- End #main -->
 
     <!-- ======= Footer ======= -->
-    <footer id="footer" class="footer">
-        <div class="copyright">
-            &copy; Copyright <strong><span>gunnnpangan</span></strong>. All Rights Reserved
-        </div>
-        <div class="credits">
-         Designed by <a href="https://www.instagram.com/4rlgnwn?igsh=MWx3bG84c2F6MGJrdw==" target="blank">4rlgnwn</a>
-        </div>
-    </footer><!-- End Footer -->
+  <footer id="footer" class="footer">
+    <div class="copyright">
+      &copy; Copyright <strong><span>GunnnPangan</span></strong>. All Rights Reserved
+    </div>
+    <div class="credits">
+       Designed by <a href="https://www.instagram.com/4rlgnwn?igsh=MWx3bG84c2F6MGJrdw==" target="blank">4rlgnwn</a>
+  </footer><!-- End Footer -->
 
     <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 

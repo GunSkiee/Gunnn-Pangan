@@ -18,7 +18,7 @@ if (isset($_POST["login"])) {
             $_SESSION["login"] = true;
             $_SESSION["username"] = $row["username"];
             $_SESSION["id_user"] = $row["id_user"];
-            header("refresh:0, cart.php");
+            header("refresh:0, index.php");
         } else {
             echo "<script>alert('Username atau password yang anda masukkan salah')</script>";
         }
@@ -35,7 +35,7 @@ if (isset($_POST["login"])) {
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Login - PantryNusantara</title>
+    <title>Login - Gunnn-Pangan</title>
     <link href="https://fonts.googleapis.com/css?family=Cairo:400,600,700&amp;display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Poppins:600&amp;display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400i,700i" rel="stylesheet">
@@ -69,7 +69,7 @@ if (isset($_POST["login"])) {
                 <div class="row">
                     <div class="col-lg-3 col-md-3 col-6 d-flex align-items-center">
                         <a href="login.php" class="biolife-logo"><img src="assets/images/favicon.png"
-                                alt="biolife logo"><b style="font-size: 150% ; color: green;">gunnnpangan</b></a>
+                                alt="biolife logo"><b style="font-size: 150% ; color: green;">Gunnn-Pangan</b></a>
                     </div>
                     <div class="col-lg-6 col-md-6 d-none d-md-block text-center">
                         <div class="primary-menu">
@@ -167,12 +167,12 @@ if (isset($_POST["login"])) {
                     <div class="col-lg-4 col-md-4 col-sm-9">
                         <section class="footer-item">
                            <a href="index.php" class="biolife-logo"><img src="assets/images/favicon.png"
-                                    alt="biolife logo"><b style="font-size: 150% ; color: green;">gunnnpangan</b></a>
+                                    alt="biolife logo"><b style="font-size: 150% ; color: green;">GunnnPangan</b></a>
                             <div class="footer-phone-info">
                                 <i class="biolife-icon icon-head-phone"></i>
                                 <p class="r-info">
                                     <span>Ada Pertanyaan ?</span>
-                                    <span>(+62) 838-6520-9331</span>
+                                    <span>0838-6520-9331</span>
                                 </p>
                             </div>
                         </section>
@@ -189,7 +189,7 @@ if (isset($_POST["login"])) {
                                     <li>
                                         <p class="info-item">
                                             <i class="biolife-icon icon-location"></i>
-                                            <b class="desc">Tanjung, Kedungtuban, Blora, Jawa Tengah</b>
+                                            <b class="desc">Tanjung-Kedungtuban, Blora, Jawa Tengah. Indonesia</b>
                                         </p>
                                     </li>
                                     <li>
@@ -201,30 +201,20 @@ if (isset($_POST["login"])) {
                                     <li>
                                         <p class="info-item">
                                             <i class="biolife-icon icon-letter"></i>
-                                            <b class="desc">Email: agunawan@gmail.com</b>
+                                            <b class="desc">Email: gunnnpangan@gmail.com</b>
                                         </p>
                                     </li>
                                     <li>
                                         <p class="info-item">
                                             <i class="biolife-icon icon-clock"></i>
-                                            <b class="desc">Jam Buka: Senin - Sabtu, Mulai Pukul 08.00 - 20.00</b>
+                                            <b class="desc">Jam Buka: Senin - Kamis, Mulai Pukul 08.00 - 20.00</b>
                                         </p>
                                     </li>
                                 </ul>
                             </div>
                             <div class="biolife-social inline">
                                 <ul class="socials">
-                                    <li><a href="#" title="twitter" class="socail-btn"><i class="fa fa-twitter"
-                                                aria-hidden="true"></i></a></li>
-                                    <li><a href="#" title="facebook" class="socail-btn"><i class="fa fa-facebook"
-                                                aria-hidden="true"></i></a></li>
-                                    <li><a href="#" title="pinterest" class="socail-btn"><i class="fa fa-pinterest"
-                                                aria-hidden="true"></i></a></li>
-                                    <li><a href="#" title="youtube" class="socail-btn"><i class="fa fa-youtube"
-                                                aria-hidden="true"></i></a></li>
-                                    <li><a href="https://www.instagram.com/4rlgnwn?igsh=MWx3bG84c2F6MGJrdw=="  title="instagram"
-                                            class="socail-btn"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                                    </li>
+                                   <li><a href="https://www.instagram.com/4rlgnwn?igsh=MWx3bG84c2F6MGJrdw==" title="instagram" class="socail-btn"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
                                 </ul>
                             </div>
                         </section>
